@@ -1,6 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+	<style>
+		#footer {
+			
+			margin-top: 100%;
+			background-color: #000000;	
+			position: absolute;
+			width: 100%;
+			height: 39%;
+
+		}		
+
+		#footer h2 {
+	
+			font-size: 27px;
+			color: #ffffff;
+			margin: 20px 0 0 80px;
+			font-family: 'Quattrocento Sans', sans-serif;
+	
+		}
+
+		#logo {
+ 
+			position: absolute;
+			margin: 20px 0 0 -90px;
+			height: 40%;
+	
+		}
+		
+		#linea3 {
+	
+			margin-top: 230px;
+			height: 4px;
+  			width: 70%;
+  			background-color: white;
+			align: center;
+	
+		}
+		#izqI {
+	
+			margin: 0 0 10px 300px;
+			width: 30px;
+	
+		}
+
+		#izqI2 {
+	
+			margin: 0 0 10px 10px;
+			width: 45px;
+
+		}
+
+		#redSocial span {
+            
+			margin-left: 355px;
+			color: #ffffff;
+    		text-transform: uppercase;
+    		font-family: 'Kanit', sans-serif;
+       
+		}
+
+		#derI {
+	
+			margin: 0 0 10px 317px;
+			width: 45px;
+
+		}
+
+		#derI2 {
+	
+			margin: 0 0 10px 3px;
+			width: 35px;
+	
+		}
+		
+		#derI3 {
+	
+			margin: 0 0 10px 2px;
+			width: 50px;
+			
+		}
+	</style>
+	
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,6 +106,18 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'home:home' %}">Inicio</a>
                 </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="{% url 'home:...' %}">Información General</a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="{% url 'home:...' %}">Patrocinadores</a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="{% url 'home:...' %}">Preparación</a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="{% url 'home:...' %}">Administración</a>
+                </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'home:logout' %}">Salir</a>
@@ -41,6 +135,24 @@
         </div>
     </nav>
     {% endblock %}
+
+	<div id="footer">
+				
+		<h2><b>Síguenos en nuestras redes sociales...</b></h2>
+		<center><img id="logo" src="sources/logo.jpeg" alt="Logo de CreateMath"></center>
+		<hr id="linea3">
+		<div id="redSocial">
+		
+			<img id="izqI" src="sources/ubi.png" alt="Ícono de ubicación">
+			<a href="https://embamex.sre.gob.mx/nigeria/index.php/es/mexico-informacion" target="_blank"><img id="izqI2" src="sources/bandera.png" alt="Bandera mexicana"></a>
+			<span>© 2021 CreateMath. Todos los derechos reservados</span>
+			<a href="https://www.facebook.com/CreateMath/" target="_blank"><img id="derI" src="sources/face.jpg" alt="Ícono de facebook"></a>
+			<a href="https://www.instagram.com/create.math/?hl=es" target="_blank"><img id="derI2" src="sources/insta.png" alt="Ícono de instagram"></a>	
+			<a href="https://www.youtube.com/channel/UCp4OqDx0gq3y7jHMtCy03-w" target="_blank"><img id="derI3" src="sources/youtube.png" alt="Ícono de youtube"></a>
+		
+		</div>
+					
+      </div>
 
     <div id="content">
         {% block content %}{% endblock %}
