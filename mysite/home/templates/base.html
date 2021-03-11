@@ -96,7 +96,7 @@
 <body>
     {% block navbar %}
     <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Olimpiada CreateMath</a>
+        <a class="navbar-brand" href="{% url 'home:home' %}">Olimpiada CreateMath</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -107,16 +107,13 @@
                     <a class="nav-link" href="{% url 'home:home' %}">Inicio</a>
                 </li>
 				<li class="nav-item">
-                    <a class="nav-link" href="{% url 'home:...' %}">Información General</a>
+                    <a class="nav-link" href="{% url 'home:info' %}">Información General</a>
                 </li>
 				<li class="nav-item">
-                    <a class="nav-link" href="{% url 'home:...' %}">Patrocinadores</a>
+                    <a class="nav-link" href="{% url 'home:patrocinadores' %}">Patrocinadores</a>
                 </li>
 				<li class="nav-item">
-                    <a class="nav-link" href="{% url 'home:...' %}">Preparación</a>
-                </li>
-				<li class="nav-item">
-                    <a class="nav-link" href="{% url 'home:...' %}">Administración</a>
+                    <a class="nav-link" href="{% url 'home:preparacion' %}">Preparación</a>
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
@@ -129,6 +126,9 @@
                 {% if user.is_staff %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'admin:index' %}">ADMIN</a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="{% url 'home:lookup' %}">Buscar Alumno</a>
                 </li>
                 {% endif %}
             </ul>

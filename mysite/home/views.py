@@ -10,27 +10,16 @@ from .forms import *
 
 # Create your views here.
 def home(request):
-    # TODO 
-    # Tarea 2
-    raise NotImplementedError
+    return render(request, "home/falta.html")
 
 def info(request):
-    template_name = "home/info.html"
-    # TODO
-    # TAREA 3
-    raise NotImplementedError
+    return render(request, "home/falta.html")
 
 def patrocinadores(request):
-    template_name = "home/patrocinadores.html"
-    # TODO
-    # TAREA 4
-    raise NotImplementedError
+    return render(request, "home/falta.html")
 
 def preparacion(request):
-    template_name = "home/preparacion.html"
-    # TODO
-    # TAREA 6
-    raise NotImplementedError
+    return render(request, "home/falta.html")
 
 def lookup(request):
     template_name="home/lookup.html"
