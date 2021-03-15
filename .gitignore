@@ -3,3 +3,4 @@ mysite/db.sqlite3
 mysite/home/migrations/*.py
 !mysite/home/migrations/__init__.py
 __pycache__/
+media
