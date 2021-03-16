@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	
+<!-- 	
 	<style>
 		#footer {
 			
@@ -84,7 +84,7 @@
 			
 		}
 	</style>
-	
+	 -->
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -100,8 +100,8 @@
 
 <body>
     {% block navbar %}
-    <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
-        <a class="navbar-brand" href="{% url 'home:home' %}">Olimpiada CreateMath</a>
+    <nav class="navbar sticky-top navbar-expand-sm navbar-dark" style="background-color: #082742;">
+        <a class="navbar-brand" href="{% url 'home:home' %}"><img src="{% static 'img/logo.jpeg' %}" alt="" height="50"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -145,7 +145,7 @@
         {% block content %}{% endblock %}
     </div>
 
-	<div id="footer">
+	<footer id="footer">
 				
 		<h2><b>Síguenos en nuestras redes sociales...</b></h2>
 		<center><img id="logo" src="{% static 'img/logo.jpeg' %}" alt="Logo de CreateMath"></center>
@@ -161,7 +161,7 @@
 		
 		</div>
 					
-	</div>
+	</footer>
 
 
     <!-- Optional JavaScript -->

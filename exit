@@ -1,0 +1,122 @@
+[33mcommit 82c94f6fbd8b39d759f1140fbddd3440b0c92fd9[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: JECamachoR <a01636767@itesm.mx>
+Date:   Sun Mar 14 21:31:17 2021 -0600
+
+    Static agregado, favicon implementado
+
+[33mcommit e580852d78bae8a54ccf35792d037890bf02b5a1[m
+Author: JECamachoR <a01636767@itesm.mx>
+Date:   Thu Mar 11 11:22:14 2021 -0600
+
+    arreglando los bugs raros de los commits que hicieron XD
+
+[33mcommit 51ee4c486f77a08228235cc58ba89811ea8bf1d7[m
+Author: V-Crypt <69556839+V-Crypt@users.noreply.github.com>
+Date:   Fri Mar 5 22:44:36 2021 -0600
+
+    Recursos visuales del footer de la página
+
+[33mcommit 171221792b37e0a47377995337262c91a7f590cb[m
+Merge: bd1f59d 4842155
+Author: JECamachoR <55936928+JECamachoR@users.noreply.github.com>
+Date:   Fri Mar 5 22:14:04 2021 -0600
+
+    Merge pull request #1 from V-Crypt/patch-2
+    
+    Update base.html
+
+[33mcommit 4842155128d939ea452d9628a63e6c5b2747b012[m
+Author: V-Crypt <69556839+V-Crypt@users.noreply.github.com>
+Date:   Fri Mar 5 17:28:15 2021 -0600
+
+    Update base.html
+
+[33mcommit bd1f59db5241589a44c616c679ece2828573ec74[m
+Author: JECamachoR <a01636767@itesm.mx>
+Date:   Thu Mar 4 20:20:10 2021 -0600
+
+    Student lookup added
+
+[33mcommit 75866d67c2b64300fb14ac108aab03d9b7ff1819[m
+Author: JECamachoR <a01636767@itesm.mx>
+Date:   Mon Mar 1 19:01:05 2021 -0600
+
+    Tareas 0.1 fix
+
+[33mcommit e5289201243a790d47ff748860b262f42b8a4117[m
+Author: JECamachoR <a01636767@itesm.mx>
+Date:   Mon Mar 1 18:59:25 2021 -0600
+
+    Tareas 0.1
+
+[33mcommit e964f221d9c0656724b595311184fc54dea2d318[m
+Author: JECamachoR <a01636767@itesm.mx>
+Date:   Fri Jan 29 19:32:59 2021 -0600
+
+    Orden de actividades corregido
+
+[33mcommit 7ff3190b0fe44b1a3a573af010737ca69e358d1d[m
+Author: JECamachoR <a01636767@itesm.mx>
+Date:   Fri Jan 29 19:31:53 2021 -0600
+
+    Info Publica Correcta 1.1
+
+[33mcommit 7b9154eca264da33eacc54e939548a5bdb8c78dd[m
+Author: JECamachoR <a01636767@itesm.mx>
+Date:   Fri Jan 29 19:29:26 2021 -0600
+
+    Info Publica Correcta
+
+[33mcommit 31ed8131b2ae45ef4a535a13ffeaf9b59b6d57be[m
+Author: JECamachoR <a01636767@itesm.mx>
+Date:   Fri Jan 29 18:57:04 2021 -0600
+
+    BUG ARREGLADO ESTUDIANTES 4
+
+[33mcommit 223fa8f496081dd390efd99bd531acc6d33ce0c2[m
+Author: JECamachoR <a01636767@itesm.mx>
+Date:   Fri Jan 29 18:16:52 2021 -0600
+
+    Actividades añadidas
+
+[33mcommit 33b6335fedd75fccbfb52e47fe428d0e2566bc8a[m
+Author: JECamachoR <a01636767@itesm.mx>
+Date:   Fri Jan 29 16:59:05 2021 -0600
+
+    Agrupacion de estudiantes terminada
+
+[33mcommit 46ede82e80902cbfc61ac32e99498aaf28bef4b5[m
+Author: JECamachoR <a01636767@itesm.mx>
+Date:   Fri Jan 29 14:17:51 2021 -0600
+
+    Modelos de Nivel y Grado Modificados a un OneToOne Relationship
+
+[33mcommit ce13560df8e1d50ebd32d63c72769610f06d0716[m
+Author: JECamachoR <a01636767@itesm.mx>
+Date:   Mon Jan 25 13:51:30 2021 -0600
+
+    Migrations arreglado
+
+[33mcommit 0d7a4c976862f56b6f52e62eb69235fdcfbd062f[m
+Author: JECamachoR <a01636767@itesm.mx>
+Date:   Mon Jan 25 13:12:45 2021 -0600
+
+    migrations deleted
+
+[33mcommit 7dade672a35034750dbe48255ab9d543fccaf5bd[m
+Author: JECamachoR <a01636767@itesm.mx>
+Date:   Mon Jan 25 13:11:26 2021 -0600
+
+    Front end max grado implementado
+
+[33mcommit 6ad8d783f6ac3159a24fd89a436d577ffbed31be[m
+Author: JECamachoR <a01636767@itesm.mx>
+Date:   Mon Jan 25 11:49:32 2021 -0600
+
+    requirements.txt
+
+[33mcommit 2c2aa76a2a7e0318cfe28b8cf7bacf33aab00482[m
+Author: JECamachoR <a01636767@itesm.mx>
+Date:   Tue Jan 19 18:07:56 2021 -0600
+
+    Login, SignUp, Logout, Navbar y demoHome terminadas
