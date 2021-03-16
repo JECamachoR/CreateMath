@@ -1,0 +1,14 @@
+body {
+    font-family: "Proxima Nova", Arial, sans-serif;
+}
+
+.bg-image {
+    position: absolute;
+    width: 100%;
+    z-index: -11;
+}
+
+.vertical-offset {
+    position: relative;
+    top: 30px;
+}

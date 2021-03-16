@@ -1,16 +1,68 @@
 {% extends "base.html" %}
+{% load static %}
 {% load crispy_forms_tags %}
 
-{% block content %}
-<div class="container">
-    <form method="post">
-        {% csrf_token %}
-        {{ form | crispy }}
-        {{ studentForm | crispy }}
-        <input type="submit" value="Submit">
-    </form>
-    <p>Ya tienes una cuenta?<a href="{% url 'home:login' %}?next={% url 'home:home' %}"> Login</a></p>
 
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<img src="{% static 'img/Fondo01.jpg' %}" class="bg-image">
+<div class="container">
+    <div class="row">
+        <p class="margin-top-10"><img src="{% static 'img/BadgeVerticalAzul-01.jpg' %}" class="col-md-2 col-4 align-center offset-md-5 offset-4 vertical-offset"></p>
+    </div>
+    <div class="row">
+        <div  class="col-12 text-white text-center vertical-offset"><p><h2><strong>REGISTRO</strong></h2></p></div>
+    </div>
+    <div class="row">
+        <div class="card col-10 offset-1 vertical-offset">
+        <div class="card-body">
+        {% comment %} <form>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword2">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword3">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form> {% endcomment %}
+            <form method="post">
+                {% csrf_token %}
+                {{ form | crispy }}
+                {{ studentForm | crispy }}
+                <input type="submit" value="Submit" class="btn btn-success">
+            </form>
+            <p>Ya tienes una cuenta?<a href="{% url 'home:login' %}?next={% url 'home:home' %}"> Login</a></p>
+        </div>
+    </div>
+</div>
 </div>
 {% endblock %}
 {% block scripts %}
