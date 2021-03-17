@@ -91,9 +91,7 @@
     
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
         <title>{% block title %}Olimpiada{% endblock %}</title>
-
 		<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
 
 </head>
@@ -142,23 +140,12 @@
     {% endblock %}
 
     <div id="content">
-        {% block content %}{% endblock %}
+        {% block content %}
+		{% endblock %}
     </div>
 
 	<footer id="footer">
-				
-		<h2><b>Síguenos en nuestras redes sociales...</b></h2>
-		<center><img id="logo" src="{% static 'img/logo.jpeg' %}" alt="Logo de CreateMath"></center>
-		<hr id="linea3">
 		<div id="redSocial">
-		
-			<img id="izqI" src="{% static 'img/ubi.png' %}" alt="Ícono de ubicación">
-			<a href="https://embamex.sre.gob.mx/nigeria/index.php/es/mexico-informacion" target="_blank"><img id="izqI2" src="{% static 'img/bandera.png' %}" alt="Bandera mexicana"></a>
-			<span>© 2021 CreateMath. Todos los derechos reservados</span>
-			<a href="https://www.facebook.com/CreateMath/" target="_blank"><img id="derI" src="{% static 'img/face.jpg' %}" alt="Ícono de facebook"></a>
-			<a href="https://www.instagram.com/create.math/?hl=es" target="_blank"><img id="derI2" src="{% static 'img/insta.png' %}" alt="Ícono de instagram"></a>	
-			<a href="https://www.youtube.com/channel/UCp4OqDx0gq3y7jHMtCy03-w" target="_blank"><img id="derI3" src="{% static 'img/youtube.png' %}" alt="Ícono de youtube"></a>
-		
 		</div>
 					
 	</footer>

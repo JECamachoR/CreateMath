@@ -1,4 +1,260 @@
 {% extends "base.html" %}
 {% block content %}
-<!-- TODO Tarea 2-->
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="headerSection" class="header">
+            <div>
+                {% load static %}
+            <img id="olimpicsLogoWhite" src="{% static 'img/LogoTransparenteBlanco.png' %}" alt="Olimpic's Logo">
+            <button type="button" id="registerButton" class="btn rounded-pill btn-lg text">Regístrate</button>
+            </div>
+            <div>
+                {% load static %}
+                <img id="mateoHeadImg" src="{% static 'img/mateoHead.png' %}" alt="Mateo's head">
+            </div>
+        </div>
+        <div id="welcomeSection">
+            <div class="row">
+                <div class="col">
+                    {% load static %}
+                    <img id="mateoCompImg" src="{% static 'img/mateoCompu.png' %}" alt="Mateo's computer">
+                </div>
+                <div class="col">
+                    <div id="welcomeTextContainer">
+                        <h1 class="text" id="welcomeHead">¡ BIENVENIDO/A !</h1>
+                        <br>
+                        <h3 class="text" id="welcomeText">Mi nombre es <span class="remarcableText">Mateo</span>, y yo te estaré acompañando durante esta Olimpiada Nacional de Matemáticas !
+                        <br><br> La Olimpiada se llevará acabo el <span class="remarcableText">sábado 15 de mayo</span>. Las inscripciones cierra el <span class="remarcableText">...</span>
+                        <br><br> Te estaré esperando!
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="whatIsSection">
+            <div class="row">
+                <div class="col">
+                    <div id="whatIsTextSection">
+                        <h3 class="text remarcableText" id="whatIsText">
+                            ¿QUÉ ES CREATEMATH?
+                            <br><br> Somos un grupo estudiantil del 
+                            <br>Tecnológico de Monterrey enfocado
+                            <br>en promover y despertar un interés
+                            <br>por las matemáticas en mentes 
+                            <br>jovenes.
+                        </h3>
+                    </div>
+                </div>
+                <div class="col">
+                    {% load static %}
+                    <img id="cfLogo" src="{% static 'img/blueLogo.jpg' %}" alt="Create Math Logo">
+                </div>
+            </div>
+        </div>
+        <div id="crowdImgSection">
+            <div id="backHeaderSection">
+                {% load static %}
+                <img id="olimpicsLogoBlack" src="{% static 'img/LogoTransparenteNegro.png' %}" alt="Olimpic's Logo">
+                <h1 class="text remarcableText" id="backHeader">3ra Olimpiada Nacional de Matemáticas 
+                    <br>Miguel Ángel Olmos Gómez
+                </h1>
+            </div>
+        </div>  
+        <div id="levelsHeaderContainer">
+            <h1 class="text remarcableText" id="levelsHeaderText">CUATRO NIVELES</h1>
+        </div>   
+        <div id="levelsContainer">
+            <div class="row">
+                <div class="col" id="firstLevel">
+                    <div class="LevelText levelBox">      
+                    <h1 class="text remarcableText" >NIVEL 1</h1>
+                    <h3 class="text remarcableText" >1ro a 3ro de primaria</h3>
+                    </div>
+                </div>
+                <div class="col" id="secondLevel">
+                    <div class="LevelText levelBox">      
+                    <h1 class="text remarcableText" >NIVEL 2</h1>
+                    <h3 class="text remarcableText" >4to a 5to de primaria</h3>
+                    </div>
+                </div>
+                <div class="col" id="thirdLevel">
+                    <div class="LevelText levelBox">      
+                    <h1 class="text remarcableText">NIVEL 3</h1>
+                    <h3 class="text remarcableText">6to de primaria a 1ro de secundaria</h3>
+                    </div>
+                </div>
+                <div class="col" id="fourthLevel">
+                    <div class="LevelText levelBox">      
+                    <h1 class="text remarcableText" >NIVEL 4</h1>
+                    <h3 class="text remarcableText" >2do a 3ro de <br> secundaria</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sponsorSection">
+            <div id="sponsorHeaderSection">
+                <h1 class="text remarcableText" id="regDateText">REGÍSTRATE ANTES DEL ...</h1>
+                <br>
+                <br>
+                <h3 class="text remarcableText" id="sponsorIntroText">Presentado por</h3>
+            </div>
+        </div>
+        <div id="footerSection">
+            <h3 class="text remarcableText" style="color: white" id="footerText">Create Math 2021</h3>
+        </div>
+        <style>
+            body {
+                overflow-x: hidden;
+                max-width: 100%;
+            }
+            .header {
+                background-color: #1d1f2b;
+                height: 32.75rem;
+            }
+            .text {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+            #welcomeHead {
+                font-weight: 600;
+                text-align: center;
+                font-size: 3.5rem;
+            }
+
+            #mateoHeadImg {
+                height: 25rem;
+                width: 65rem;
+                position: relative;
+                top: 2.75rem;
+                left: 13.5rem;
+            }
+            #olimpicsLogoWhite{
+                position: relative;
+                left: 39.5rem;
+                top: 2.5rem;
+                width: 15rem;
+                height: 5rem;
+            }
+            #registerButton {
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 2rem;
+                text-align: center;
+                background-color: #fedc25;
+                left: 26.5rem !important;
+                top: 8rem;
+                position: relative;
+            }
+
+            #mateoCompImg {
+                width: 35rem;
+                height: 35rem;
+                margin-top: 2rem; 
+                position: relative;
+                left: 7.5rem;
+            }
+            #welcomeTextContainer {
+                margin-top: 5rem;
+                margin-right: 2rem;
+            }
+            .remarcableText {
+                font-weight: 600;
+            }
+            #whatIsText {
+                color: white;
+                margin-top: 10rem;
+                margin-left: 12rem;
+                font-size: 2rem;
+            }
+            #whatIsSection {
+                background-color: #041e41;
+                height: 35rem;
+            }
+
+            #cfLogo {
+                width: 25rem;
+                height: 25rem;
+                margin-top: 5rem;
+                margin-left: 10rem;
+            }
+            #crowdImgSection {
+                background: url('static/img/crowdBack.jpg');
+                height: 30rem;
+            }
+            #backHeader {
+                text-align: center;
+                font-size: 3rem;
+                position: absolute;
+                top: 10rem;
+                left: 18.5rem;
+            }
+            #backHeaderSection {
+                position: relative;
+                top: 5rem;
+                }
+            #levelsHeaderText {
+                text-align: center;
+                color: white;
+                position: relative;
+                top: 1rem;
+            }
+            #levelsHeaderContainer {
+                background-color: #1d1f2b;
+                height: 5rem;
+            }
+            #firstLevel {
+                background-color: #ffda27;
+            }
+            #secondLevel {
+                background-color: #2b7de1;
+            }
+            #thirdLevel {
+                background-color: #01ae43;
+            }
+            #fourthLevel {
+                background-color: #f52935;
+            }
+            
+            .LevelText {
+                position: relative;
+                top: 1rem;
+            }
+            .levelBox {
+                height: 9rem !important;
+                text-align: center !important;
+            }
+            #olimpicsLogoBlack {
+                width: 30rem;
+                height: 10rem;
+                position: absolute;
+                left: 32.5rem;
+            }
+            #regDateText {
+                font-size: 2rem;
+                position: relative;
+                top: 4rem;
+                text-align: center;
+            }
+            #sponsorSection {
+                height: 25rem;
+            }
+            #sponsorIntroText {
+                position: relative;
+                top: 4rem;
+                text-align: center;
+            }
+            #footerSection {
+                background-color: #041e41;
+                height: 4rem;
+            }
+            #footerText {
+                position: relative;
+                top: 1rem;
+                left: 1rem;
+            }
+        </style>
+    </body>
+</html>
 {% endblock %}
