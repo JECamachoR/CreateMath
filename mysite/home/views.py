@@ -5,8 +5,8 @@ from django.views.generic import TemplateView, ListView
 from django.contrib.auth.models import User, Group
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, logout
-from .models import GRUPO_POR_GRADO, Actividad, Estudiante
-from .forms import *
+from .models import GRUPO_POR_GRADO, Actividad, Estudiante, Tutor
+from .forms import StudentForm, TutorForm
 
 # Create your views here.
 def home(request):
@@ -68,19 +68,21 @@ def sign_up(request):
     if request.user.is_authenticated:
         return redirect("home:home")
     
-    form = UserCreationForm_custom(request.POST or None)
-    studentForm = StudentForm(request.POST or None)
+    student_form = StudentForm(request.POST or None)
+    tutor_form = TutorForm(request.POST or None)
 
     if request.method == "POST":
-        if form.is_valid() and studentForm.is_valid():
-            user = form.save()
-            student = studentForm.save(commit=False)
-            student.user = user
+        if tutor_form.is_valid() and student_form.is_valid():
+            student = student_form.save(commit=False)
+            student.username = f"{student.grado}-{student.id}"
             student.save()
+            parent = tutor_form.save(commit=False)
+            parent.hijo = student
+            parent.save()
             grupo, b = Group.objects.get_or_create(name=GRUPO_POR_GRADO[student.grado])
-            grupo.user_set.add(user)
-            login(request,user)
+            grupo.user_set.add(student)
+            login(request,student)
             return redirect('home:home')
     
-    context = {"form": form, "studentForm": studentForm}
+    context = {"tutor_form": tutor_form, "student_form": student_form}
     return render(request,'registration/sign_up.html',context)

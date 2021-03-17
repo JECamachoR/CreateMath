@@ -1,5 +1,7 @@
 from django.db import models
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import AbstractUser, Group
+from phonenumber_field.modelfields import PhoneNumberField
+
 # Create your models here.
 
 GRADOS = [
@@ -33,21 +35,46 @@ GRUPO_POR_GRADO = [
     "ESTUDIANTES 4"
 ]
 
-class Estudiante(models.Model):
+# Datos del alumno:
+# -Nombre (s)   +
+# -Apellidos    +
+# -Escuela      +
+# -Grado (que cursa actualmente el alumno)  +
+# -Estado       +
+# -Municipio    +
+# -Fecha de nacimiento  +
+# Datos de tutor: (que por favor sea el mismo que realiza el pago)
+# -Nombre completo  +
+# -Parentesco
+# -Contacto correo
+# -Contacto wa
+
+class Estudiante(AbstractUser):
     """
     Modelo que representa al estudiante en la base de datos
     """
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    escuela = models.CharField(max_length=128)
+    escuela = models.CharField(max_length=128, blank=True, null=True)
     grado = models.IntegerField(choices=[
         (i, GRADOS[i])
         for i in range(9)
-    ])
-    estatus_de_inscripcion = models.IntegerField(default=0)
-    matricula = models.CharField(max_length=32, blank=True, null=True)
+    ], blank=True, null=True)
+    estatus_de_inscripcion = models.IntegerField(default=0, null=True)
+    estado = models.CharField(max_length=128, blank=True, null=True)
+    municipio = models.CharField(max_length=128, blank=True, null=True)
+    fecha_de_nacimiento = models.DateField(blank=True, null=True)
+
 
     def __str__(self):
-        return f"{self.user.first_name} de {self.escuela}"
+        if self.is_staff:
+            return f"{self.username} - STAFF"
+        return f"{self.first_name} de {self.grado}"
+
+class Tutor(models.Model):
+    hijo = models.OneToOneField(Estudiante, on_delete=models.CASCADE)
+    nombre_completo = models.CharField(max_length=128)
+    parentesco = models.CharField(max_length=128)
+    correo = models.EmailField()
+    celular = PhoneNumberField()
 
 class Actividad(models.Model):
     nombre = models.CharField(max_length=128)

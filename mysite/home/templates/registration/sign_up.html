@@ -19,47 +19,18 @@
     <div class="row">
         <div class="card col-10 offset-1 vertical-offset">
         <div class="card-body">
-        {% comment %} <form>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword2">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword3">
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form> {% endcomment %}
             <form method="post">
                 {% csrf_token %}
-                {{ form | crispy }}
-                {{ studentForm | crispy }}
-                <input type="submit" value="Submit" class="btn btn-success">
+                <p><h3>Tus datos</h3></p>
+                {{ student_form | crispy }}
+                <p><h3>Datos de tu padre o tutor</h3></p>
+                {{ tutor_form | crispy }}
+                <input type="submit" value="Ir a Pago" class="btn btn-primary col-10 col-md-4 offset-1 offset-md-4">
+                <p class="text-center col-12 col-md-6 offset-md-3">Se pide una cuota de $100.00 MXN (cien pesos 00/100) de recuperación. 
+                El pago se realiza por medio de un servicio externo al de CreateMath por
+                lo que no se hace responsable de los procesos.</p>
             </form>
-            <p>Ya tienes una cuenta?<a href="{% url 'home:login' %}?next={% url 'home:home' %}"> Login</a></p>
+            <p class="text-right">Ya tienes una cuenta?<a href="{% url 'home:login' %}?next={% url 'home:home' %}"> Inicia Sesión</a></p>
         </div>
     </div>
 </div>
