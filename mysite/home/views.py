@@ -10,7 +10,7 @@ from .forms import StudentForm, TutorForm
 
 # Create your views here.
 def home(request):
-    return render(request, "home/falta.html")
+    return render(request, "home/home.html")
 
 def info(request):
     return render(request, "home/falta.html")

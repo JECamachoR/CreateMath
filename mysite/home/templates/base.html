@@ -12,7 +12,6 @@
     
 		{% block style %}{% endblock %}
         <title>{% block title %}Olimpiada{% endblock %}</title>
-
 		<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
 
 </head>
@@ -61,8 +60,16 @@
     {% endblock %}
 
     <div id="content">
-        {% block content %}{% endblock %}
+        {% block content %}
+		{% endblock %}
     </div>
+
+	<footer id="footer">
+		<div id="redSocial">
+		</div>
+					
+	</footer>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
